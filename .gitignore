@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+SPEC.md
+
+# Excel auxiliar para cargar el modelo en Power BI (se genera desde data/processed)
+dashboard/modelo_bi.xlsx
+
+# Zips para repartir el trabajo (no van al repo)
+_zips/
