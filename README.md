@@ -1,6 +1,15 @@
-# Evento Evaluativo 3 — Proyecto de Business Intelligence
-**Curso:** Análisis de Datos (ITM, 2026-2) · **Docente:** Daniel Alexis Nieto Mora
-**Equipo 2:** Isabel, Eduardo, Sebastian, Edwin
+# Entrega 3 – Análisis de Datos
+
+**Instituto Tecnológico Metropolitano (ITM)** · Ingeniería de Sistemas
+**Curso:** Análisis de Datos · **Docente:** Daniel Alexis Nieto Mora · **Semestre:** 2026-2
+
+## Integrantes
+
+- Isabel Johana Hoyos Echavarria
+- Jhon Eduardo Zabala Garzón
+- Sebastian Villa Castillo
+- Edwin Ramírez Gonzáles
+
 **Tema:** Clientes bancarios
 
 ## Objetivo
