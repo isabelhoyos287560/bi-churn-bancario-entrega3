@@ -1,0 +1,5 @@
+﻿id_actividad,es_activo,tiene_tarjeta,estado_actividad,tarjeta_credito,perfil_uso
+1,1,1,Activo,Con tarjeta,Activo · Con tarjeta
+2,1,0,Activo,Sin tarjeta,Activo · Sin tarjeta
+3,0,1,Inactivo,Con tarjeta,Inactivo · Con tarjeta
+4,0,0,Inactivo,Sin tarjeta,Inactivo · Sin tarjeta

@@ -1,0 +1,5 @@
+﻿id_saldo,rango_saldo,detalle_saldo
+1,Sin saldo,0
+2,Saldo bajo,"hasta 107,138"
+3,Saldo medio,"107,138 a 132,122"
+4,Saldo alto,"más de 132,122"
