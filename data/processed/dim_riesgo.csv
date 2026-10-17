@@ -1,0 +1,4 @@
+﻿id_riesgo,nivel_riesgo,rango_probabilidad,accion_sugerida
+1,Bajo,menos de 20%,Seguimiento normal
+2,Medio,20% a 50%,Revisar y ofrecer producto
+3,Alto,50% o más,Llamar esta semana

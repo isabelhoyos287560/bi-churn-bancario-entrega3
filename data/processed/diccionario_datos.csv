@@ -1,0 +1,54 @@
+﻿tabla,columna,tipo,rol,descripcion
+fact_clientes,id_cliente,int64,Identificador del cliente,Código del cliente en el banco
+fact_clientes,apellido,str,Atributo,"Apellido del cliente (dato descriptivo, no es llave)"
+fact_clientes,id_geografia,int64,Llave foránea,Llave del país
+fact_clientes,id_genero,int64,Llave foránea,Llave del género
+fact_clientes,id_edad,int64,Llave foránea,Llave del rango de edad
+fact_clientes,id_antiguedad,int64,Llave foránea,Llave del rango de antigüedad
+fact_clientes,id_score,int64,Llave foránea,Llave del rango de puntaje de crédito
+fact_clientes,id_salario,int64,Llave foránea,Llave del rango de salario
+fact_clientes,id_saldo,int64,Llave foránea,Llave del rango de saldo
+fact_clientes,id_productos,int64,Llave foránea,Llave de la cantidad de productos
+fact_clientes,id_actividad,int64,Llave foránea,Llave del perfil de uso
+fact_clientes,id_estado,int64,Llave foránea,Llave del estado del cliente
+fact_clientes,edad,int64,Medida,Edad del cliente en años
+fact_clientes,anios_cliente,int64,Medida,Años que lleva como cliente
+fact_clientes,puntaje_credito,int64,Medida,Puntaje de crédito
+fact_clientes,saldo,float64,Medida,Saldo en la cuenta
+fact_clientes,salario_estimado,float64,Medida,Salario estimado
+fact_clientes,num_productos,int64,Medida,Cantidad de productos del banco que tiene
+fact_clientes,abandono,int64,Medida,"1 si el cliente se fue del banco, 0 si sigue"
+dim_geografia,id_geografia,int64,Llave primaria,Llave del país
+dim_geografia,pais,str,Atributo,País del cliente
+dim_geografia,pais_original,str,Atributo,País como venía en el dataset
+dim_genero,id_genero,int64,Llave primaria,Llave del género
+dim_genero,genero,str,Atributo,Género del cliente
+dim_genero,genero_original,str,Atributo,Género como venía en el dataset
+dim_edad,id_edad,int64,Llave primaria,Llave del rango de edad
+dim_edad,rango_edad,str,Atributo,Rango de edad en años
+dim_antiguedad,id_antiguedad,int64,Llave primaria,Llave del rango de antigüedad
+dim_antiguedad,rango_antiguedad,str,Atributo,Rango de años como cliente
+dim_score,id_score,int64,Llave primaria,Llave del rango de puntaje de crédito
+dim_score,rango_score,str,Atributo,Rango de puntaje de crédito (convención tipo FICO)
+dim_saldo,id_saldo,int64,Llave primaria,Llave del rango de saldo
+dim_saldo,rango_saldo,str,Atributo,"Grupo de saldo (cero, bajo, medio, alto)"
+dim_saldo,detalle_saldo,str,Atributo,Límites del grupo de saldo
+dim_salario,id_salario,int64,Llave primaria,Llave del rango de salario
+dim_salario,rango_salario,str,Atributo,Tramo de salario estimado
+dim_productos,id_productos,int64,Llave primaria,Llave de la cantidad de productos
+dim_productos,productos,str,Atributo,Cantidad de productos que tiene el cliente
+dim_productos,grupo_productos,str,Atributo,"Agrupación de productos: 1, 2 o 3 o 4"
+dim_actividad,id_actividad,int64,Llave primaria,Llave del perfil de uso
+dim_actividad,es_activo,int64,Atributo,"1 si el cliente es activo, 0 si no"
+dim_actividad,tiene_tarjeta,int64,Atributo,"1 si tiene tarjeta de crédito, 0 si no"
+dim_actividad,estado_actividad,str,Atributo,Activo o inactivo
+dim_actividad,tarjeta_credito,str,Atributo,Con o sin tarjeta
+dim_actividad,perfil_uso,str,Atributo,Combinación de actividad y tarjeta
+dim_estado,id_estado,int64,Llave primaria,Llave del estado del cliente
+dim_estado,estado,str,Atributo,Sigue o Se fue
+fact_clientes,prob_abandono,float64,Medida,Riesgo de abandono del cliente calculado por el modelo (0 a 1)
+fact_clientes,id_riesgo,int64,Llave foránea,Conecta con dim_riesgo
+dim_riesgo,id_riesgo,int64,Llave primaria,Código del nivel de riesgo
+dim_riesgo,nivel_riesgo,str,Atributo,"Bajo, Medio o Alto"
+dim_riesgo,rango_probabilidad,str,Atributo,Rango de probabilidad que define el nivel
+dim_riesgo,accion_sugerida,str,Atributo,Qué hacer con los clientes de ese nivel
