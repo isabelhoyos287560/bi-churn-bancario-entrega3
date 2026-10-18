@@ -26,7 +26,7 @@
 | Tipo de dato | Secundario: lo recogió alguien más. No sabemos cómo se midió y **no trae fechas** |
 | Calidad | Sin nulos, sin filas repetidas, un cliente por fila. Todos los valores tienen sentido (edades 18 a 92, puntajes 350 a 850, saldos sin negativos) |
 | Qué se descarta | `RowNumber` (solo cuenta filas). `CustomerId` se queda como llave y `Surname` solo en la lista de detalle |
-| Resultado de prepararlo | 11 tablas en `data/processed/` (1 de hechos y 10 de dimensiones, más `dim_riesgo` del modelo) |
+| Resultado de prepararlo | 12 tablas en `data/processed/` (1 de hechos y 11 de dimensiones, incluida `dim_riesgo` del modelo) |
 
 ## Objetivo
 
@@ -46,7 +46,7 @@ El producto final es un dashboard en Power BI que funciona como **termómetro de
 |---|---|---|
 | 1. Comprensión | Contexto del dataset, calidad, variable objetivo, problema y tres preguntas | `01_comprension.ipynb` |
 | 2. Hipótesis | Cuatro hipótesis con H0 y H1, supuestos, p-valor, tamaño del efecto e intervalos de confianza | `02_hipotesis.ipynb` |
-| 3. Preparación | ETL, modelo en estrella (1 tabla de hechos y 10 dimensiones), comprobación de que no se perdió ni se inventó nada | `03_preparacion_modelo.ipynb` |
+| 3. Preparación | ETL, modelo en estrella (1 tabla de hechos y 11 dimensiones), comprobación de que no se perdió ni se inventó nada | `03_preparacion_modelo.ipynb` |
 | 4. KPIs y riesgo | 9 KPIs con semáforo, medidas DAX y modelo de riesgo por cliente | `04_kpis_y_modelo_riesgo.ipynb` |
 | 5. Dashboard | Cinco páginas en Power BI con una historia de principio a fin | `dashboard/churn_clientes.pbix` |
 
