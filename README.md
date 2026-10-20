@@ -15,7 +15,7 @@
 
 ## Video
 
-[Ver el video de la sustentación](ENLACE_AL_VIDEO) · máximo 14 minutos
+[Ver el video de la sustentación](https://youtu.be/fL7XLfV54hc)
 
 ## Dataset elegido
 
@@ -47,7 +47,7 @@ El producto final es un dashboard en Power BI que funciona como **termómetro de
 | 1. Comprensión | Contexto del dataset, calidad, variable objetivo, problema y tres preguntas | `01_comprension.ipynb` |
 | 2. Hipótesis | Cuatro hipótesis con H0 y H1, supuestos, p-valor, tamaño del efecto e intervalos de confianza | `02_hipotesis.ipynb` |
 | 3. Preparación | ETL, modelo en estrella (1 tabla de hechos y 11 dimensiones), comprobación de que no se perdió ni se inventó nada | `03_preparacion_modelo.ipynb` |
-| 4. KPIs y riesgo | 9 KPIs con semáforo, medidas DAX y modelo de riesgo por cliente | `04_kpis_y_modelo_riesgo.ipynb` |
+| 4. KPIs y riesgo | 10 KPIs con semáforo, medidas DAX y modelo de riesgo por cliente | `04_kpis_y_modelo_riesgo.ipynb` |
 | 5. Dashboard | Cinco páginas en Power BI con una historia de principio a fin | `dashboard/churn_clientes.pbix` |
 
 **Reglas que fijamos antes de mirar resultados:** α = 0,05, pruebas bilaterales, y siempre reportar el tamaño del efecto (con 10.000 filas casi todo sale "significativo", así que el p-valor solo no basta). Como hicimos cuatro pruebas a la vez, repetimos la decisión con la corrección de Bonferroni (α = 0,05 / 4 = 0,0125).
@@ -72,7 +72,7 @@ Cada hipótesis compara a los clientes que se fueron con los que se quedaron.
 
 ## KPIs
 
-Son 9 KPIs (definidos en `data/processed/kpi_definiciones.csv`). Cada uno tiene una fórmula, un semáforo y una acción. **Los umbrales son una propuesta del grupo**: el dataset no trae metas del banco, y en la práctica las definiría el banco.
+Son 10 KPIs. Los nueve primeros alertan (están en `data/processed/kpi_definiciones.csv`) y cada uno tiene una fórmula, un semáforo y una acción; el décimo, "lo que no pesa", descarta variables. **Los umbrales son una propuesta del grupo**: el dataset no trae metas del banco, y en la práctica las definiría el banco.
 
 | KPI | Qué mide | Valor | Verde hasta | Rojo desde | Estado | Qué hacer si se enciende |
 |---|---|---|---|---|---|---|
@@ -85,6 +85,7 @@ Son 9 KPIs (definidos en `data/processed/kpi_definiciones.csv`). Cada uno tiene 
 | K7 Abandono con 3 o más productos | Tasa de ese grupo | 85,9 % | 30 % | 50 % | Rojo | Investigar esos productos antes de vender más |
 | K8 Saldo en riesgo alto | Saldo de clientes en riesgo alto que siguen, sobre el saldo de quienes siguen | 4,8 % | 5 % | 10 % | Verde | Pasar la lista de clientes al equipo comercial |
 | K9 Brecha de género | Abandono de mujeres menos el de hombres | 8,6 puntos | 3 | 6 | Rojo | Revisar productos o canales que expliquen la diferencia |
+| K10 Lo que no pesa | Diferencia entre el mejor y el peor grupo de score, salario y antigüedad | 3,4 · 1,6 · 1,5 puntos | n/a | n/a | Descarta | No hacer campañas por score, salario o antigüedad |
 
 Que casi todo esté en rojo no significa que el banco esté colapsando: los KPIs por grupo encienden donde se concentra el abandono, y los umbrales son nuestros. Al filtrar en el dashboard (por ejemplo, solo Francia) los semáforos cambian y se ve dónde el problema es grave.
 
@@ -95,7 +96,7 @@ Los KPIs dicen **qué grupos** se van; el modelo dice **qué clientes**. Compara
 | Modelo | AUC en datos de prueba |
 |---|---|
 | Regresión logística | 0,857 |
-| Random Forest | cercano a los otros dos |
+| Random Forest | 0,874 |
 | **Gradient Boosting (elegido)** | **0,879** |
 
 Los tres quedan entre 0,857 y 0,879: el patrón es claro y no depende de un modelo complicado. Para dar un riesgo a **todos** los clientes usamos validación cruzada de 5 partes, así nadie recibe un riesgo "memorizado".
