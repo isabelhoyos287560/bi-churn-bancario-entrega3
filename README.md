@@ -21,7 +21,7 @@ https://youtu.be/8XfEV0TEzlM
 
 | | |
 |---|---|
-| **Base de datos final** | **Bank Customer Churn** (Kaggle): [mathchi/churn-for-bank-customers](https://www.kaggle.com/datasets/mathchi/churn-for-bank-customers), archivo `churn.csv` |
+| **Base de datos final** | **Churn Modelling** (Kaggle): [shubh0799/churn-modelling](https://www.kaggle.com/datasets/shubh0799/churn-modelling), archivo `Churn_Modelling.csv` |
 | Qué contiene | 10.000 clientes de un banco con presencia en Francia (5.014), Alemania (2.509) y España (2.477). 14 columnas: puntaje de crédito, país, género, edad, años como cliente, saldo, productos, tarjeta, actividad, salario estimado y si el cliente se fue (`Exited`) |
 | Tipo de dato | Secundario: lo recogió alguien más. No sabemos cómo se midió y **no trae fechas** |
 | Calidad | Sin nulos, sin filas repetidas, un cliente por fila. Todos los valores tienen sentido (edades 18 a 92, puntajes 350 a 850, saldos sin negativos) |
