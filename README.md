@@ -15,7 +15,7 @@
 
 ## Video
 
-[Ver el video de la sustentación](https://youtu.be/fL7XLfV54hc)
+https://youtu.be/fL7XLfV54hc
 
 ## Dataset elegido
 
